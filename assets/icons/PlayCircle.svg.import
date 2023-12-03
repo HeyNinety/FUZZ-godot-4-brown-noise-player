@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr4dkodjdfwnm"
-path="res://.godot/imported/noun-light-1632574.png-b580fb527de4bbdec77cdab40dda2321.ctex"
+uid="uid://do7fk33fm1fvv"
+path="res://.godot/imported/PlayCircle.svg-0373aeee6e09d373bbaa61b6561052d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/noun-light-1632574.png"
-dest_files=["res://.godot/imported/noun-light-1632574.png-b580fb527de4bbdec77cdab40dda2321.ctex"]
+source_file="res://assets/icons/PlayCircle.svg"
+dest_files=["res://.godot/imported/PlayCircle.svg-0373aeee6e09d373bbaa61b6561052d4.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=8.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

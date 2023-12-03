@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd5qkcnsr6bq7"
-path="res://.godot/imported/noun-mute-4700633.png-3ee345a712b028bf5c5bbff089e3b0b2.ctex"
+uid="uid://odyul8otvpm7"
+path="res://.godot/imported/SpeakerWave.svg-0619e73fdc206014224623297f6aa18c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/noun-mute-4700633.png"
-dest_files=["res://.godot/imported/noun-mute-4700633.png-3ee345a712b028bf5c5bbff089e3b0b2.ctex"]
+source_file="res://assets/icons/SpeakerWave.svg"
+dest_files=["res://.godot/imported/SpeakerWave.svg-0619e73fdc206014224623297f6aa18c.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=8.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpt4hk1lff082"
-path="res://.godot/imported/noun-play-button-4700619.png-9d9193a8662346545b033904182dd6ec.ctex"
+uid="uid://b75ouflx7k6pi"
+path="res://.godot/imported/MinusCircle.svg-34e55c6e38e7a9cc97c0a8ba34d8530a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/noun-play-button-4700619.png"
-dest_files=["res://.godot/imported/noun-play-button-4700619.png-9d9193a8662346545b033904182dd6ec.ctex"]
+source_file="res://assets/icons/MinusCircle.svg"
+dest_files=["res://.godot/imported/MinusCircle.svg-34e55c6e38e7a9cc97c0a8ba34d8530a.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=8.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

@@ -22,3 +22,7 @@ func _on_value_changed(value: float) -> void:
 		bus_index,
 		linear_to_db(value)
 	)
+
+
+func _on_mouse_exited():
+	self.release_focus()

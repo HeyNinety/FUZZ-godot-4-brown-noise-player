@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8qnxd148tgk8"
-path="res://.godot/imported/noun-pause-button-4700628.png-895423c940984ed74915bf802aebe0b3.ctex"
+uid="uid://by5mqam08u2dg"
+path="res://.godot/imported/XCircle.svg-87635e35b87039d1ddcc761abca87b08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/noun-pause-button-4700628.png"
-dest_files=["res://.godot/imported/noun-pause-button-4700628.png-895423c940984ed74915bf802aebe0b3.ctex"]
+source_file="res://assets/icons/XCircle.svg"
+dest_files=["res://.godot/imported/XCircle.svg-87635e35b87039d1ddcc761abca87b08.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=8.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

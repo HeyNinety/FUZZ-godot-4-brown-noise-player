@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b20kiaxdjvvjb"
-path="res://.godot/imported/noun-like-4699854.png-9c3fe9b125ad6a1ba5ceb1c734dc6075.ctex"
+uid="uid://c70tcusnoisng"
+path="res://.godot/imported/LightBulb.svg-260550acb64a6572a50ff92eca969fa9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/noun-like-4699854.png"
-dest_files=["res://.godot/imported/noun-like-4699854.png-9c3fe9b125ad6a1ba5ceb1c734dc6075.ctex"]
+source_file="res://assets/icons/LightBulb.svg"
+dest_files=["res://.godot/imported/LightBulb.svg-260550acb64a6572a50ff92eca969fa9.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=8.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

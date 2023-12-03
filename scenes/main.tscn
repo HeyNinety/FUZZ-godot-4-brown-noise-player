@@ -1,11 +1,12 @@
-[gd_scene load_steps=26 format=3 uid="uid://da0pnhi6ei4g0"]
+[gd_scene load_steps=39 format=3 uid="uid://da0pnhi6ei4g0"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_ewbu8"]
 [ext_resource type="Texture2D" uid="uid://b2tfovctiv7gs" path="res://assets/images/pexels-matt-hardy-2109758.jpg" id="1_f7k1j"]
-[ext_resource type="Texture2D" uid="uid://b20kiaxdjvvjb" path="res://assets/icons/noun-like-4699854.png" id="2_1v6jv"]
-[ext_resource type="Texture2D" uid="uid://cr4dkodjdfwnm" path="res://assets/icons/noun-light-1632574.png" id="2_aojef"]
-[ext_resource type="Texture2D" uid="uid://cpfss54h1hhyi" path="res://assets/icons/noun-volume-4700630.png" id="3_3g8q6"]
-[ext_resource type="Texture2D" uid="uid://bpt4hk1lff082" path="res://assets/icons/noun-play-button-4700619.png" id="3_vcja6"]
+[ext_resource type="Texture2D" uid="uid://ciltloduhnytp" path="res://assets/icons/Heart.svg" id="3_51bfy"]
+[ext_resource type="Texture2D" uid="uid://c70tcusnoisng" path="res://assets/icons/LightBulb.svg" id="3_ikp8g"]
+[ext_resource type="Texture2D" uid="uid://do7fk33fm1fvv" path="res://assets/icons/PlayCircle.svg" id="4_mng0e"]
+[ext_resource type="Script" path="res://scenes/SupportButton.gd" id="5_60fsh"]
+[ext_resource type="Texture2D" uid="uid://odyul8otvpm7" path="res://assets/icons/SpeakerWave.svg" id="5_gdcre"]
 [ext_resource type="AudioStream" uid="uid://6n6a55u62dd3" path="res://assets/audio/Brownnoise.ogg" id="7_ei42t"]
 [ext_resource type="Script" path="res://scenes/HSlider.gd" id="7_gtag2"]
 
@@ -17,6 +18,21 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byxc5"]
 bg_color = Color(0, 0, 0, 0.501961)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g0j85"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yi5mp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cps26"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7f0vt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y3yqm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1o4g"]
+bg_color = Color(0.223529, 0.188235, 0.172549, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yrtfr"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dtt7b"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s3s8n"]
@@ -27,14 +43,9 @@ bg_color = Color(0, 0, 0, 0.501961)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxe0d"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1o4g"]
-bg_color = Color(0.223529, 0.188235, 0.172549, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yrtfr"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wgi6h"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w4o3k"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgt66"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fobm5"]
 
@@ -45,6 +56,23 @@ bg_color = Color(0.223529, 0.188235, 0.172549, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7kxk0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_drwnn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cyorr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_abqyn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k1q3c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pj4rt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w1why"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_t6ahn"]
+color = Color(0.121569, 0.0980392, 0.0901961, 1)
+thickness = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ptl4w"]
+bg_color = Color(0.52549, 0.419608, 0.345098, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -109,23 +137,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -23.0
-offset_right = 23.0
-offset_bottom = 23.0
+offset_left = -27.0
+offset_top = -27.0
+offset_right = 27.0
+offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_dtt7b")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_s3s8n")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_l0b5s")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_q1ctt")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hxe0d")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g0j85")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yi5mp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cps26")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7f0vt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y3yqm")
 toggle_mode = true
-icon = ExtResource("2_aojef")
+icon = ExtResource("3_ikp8g")
 flat = true
 expand_icon = true
 
@@ -155,10 +179,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -39.0
-offset_top = -34.0
-offset_right = 39.0
-offset_bottom = 44.0
+offset_left = -28.0
+offset_top = -28.0
+offset_right = 28.0
+offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
@@ -170,9 +194,10 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_s3s8n")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_l0b5s")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_q1ctt")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hxe0d")
-icon = ExtResource("2_1v6jv")
+icon = ExtResource("3_51bfy")
 flat = true
 expand_icon = true
+script = ExtResource("5_60fsh")
 
 [node name="MediaControlsFrame" type="Panel" parent="BottomPanel"]
 layout_mode = 1
@@ -196,19 +221,21 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -47.0
-offset_top = -47.0
-offset_right = 47.0
-offset_bottom = 47.0
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_w4o3k")
+theme_override_colors/font_color = Color(0.592157, 0.54902, 0.509804, 1)
+theme_override_colors/icon_normal_color = Color(0.592157, 0.54902, 0.509804, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lgt66")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_fobm5")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_in56p")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_btt0l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7kxk0")
 toggle_mode = true
-icon = ExtResource("3_vcja6")
+icon = ExtResource("4_mng0e")
 expand_icon = true
 
 [node name="VolumeFrame" type="Panel" parent="BottomPanel"]
@@ -231,12 +258,17 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 5.0
-offset_top = -26.0
-offset_right = 57.0
-offset_bottom = 26.0
+offset_left = -3.0
+offset_top = -34.0
+offset_right = 65.0
+offset_bottom = 34.0
 grow_vertical = 2
-icon = ExtResource("3_3g8q6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cyorr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_abqyn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k1q3c")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pj4rt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w1why")
+icon = ExtResource("5_gdcre")
 expand_icon = true
 
 [node name="HSlider" type="HSlider" parent="BottomPanel/VolumeFrame"]
@@ -250,12 +282,15 @@ offset_top = -8.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_t6ahn")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_ptl4w")
 max_value = 1.0
 step = 0.001
 script = ExtResource("7_gtag2")
 bus_name = "Master"
 
 [node name="ProgressPanel" type="Panel" parent="BottomPanel"]
+visible = false
 layout_mode = 0
 offset_top = -4.0
 offset_right = 1280.0
@@ -271,6 +306,8 @@ show_percentage = false
 stream = ExtResource("7_ei42t")
 
 [connection signal="toggled" from="ImagePanel/BrightnessFrame/BrightnessToggle" to="." method="_on_brightness_toggle_toggled"]
+[connection signal="pressed" from="BottomPanel/SupportFrame/SupportButton" to="BottomPanel/SupportFrame/SupportButton" method="_on_pressed"]
 [connection signal="toggled" from="BottomPanel/MediaControlsFrame/Play" to="." method="_on_play_toggled"]
 [connection signal="drag_ended" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_drag_ended"]
+[connection signal="mouse_exited" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_mouse_exited"]
 [connection signal="value_changed" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_value_changed"]

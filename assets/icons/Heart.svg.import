@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpfss54h1hhyi"
-path="res://.godot/imported/noun-volume-4700630.png-fe3ed694c0a33b979ba892c82f7e2615.ctex"
+uid="uid://ciltloduhnytp"
+path="res://.godot/imported/Heart.svg-0ab6963a35d0b59270531cd65b47ee68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/noun-volume-4700630.png"
-dest_files=["res://.godot/imported/noun-volume-4700630.png-fe3ed694c0a33b979ba892c82f7e2615.ctex"]
+source_file="res://assets/icons/Heart.svg"
+dest_files=["res://.godot/imported/Heart.svg-0ab6963a35d0b59270531cd65b47ee68.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=8.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

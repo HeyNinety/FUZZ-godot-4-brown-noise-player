@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcgmx1xhgil4o"
-path="res://.godot/imported/noun-fast-forward-4700638.png-3a17d2a7e510fe8f60b82ecce262afb3.ctex"
+uid="uid://ca63jykpcsg3w"
+path="res://.godot/imported/PauseCircle.svg-a593c04a78c0d80f5d5feccf85e55548.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/noun-fast-forward-4700638.png"
-dest_files=["res://.godot/imported/noun-fast-forward-4700638.png-3a17d2a7e510fe8f60b82ecce262afb3.ctex"]
+source_file="res://assets/icons/PauseCircle.svg"
+dest_files=["res://.godot/imported/PauseCircle.svg-a593c04a78c0d80f5d5feccf85e55548.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=8.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
