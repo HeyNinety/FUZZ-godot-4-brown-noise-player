@@ -8,6 +8,7 @@ FUZZ is an open-source top-down 2D item interaction project made with the [Godot
 
 
 ## Preview
+![Screenshot from 2023-12-03 17-49-45](https://github.com/HeyNinety/FUZZ-godot-4-brown-noise-player/assets/68526679/63b334c0-2193-48a6-ab96-47429a2450a2)
 
 
 ## Features
