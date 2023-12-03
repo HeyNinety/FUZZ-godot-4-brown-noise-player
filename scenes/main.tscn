@@ -1,8 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://da0pnhi6ei4g0"]
+[gd_scene load_steps=33 format=3 uid="uid://da0pnhi6ei4g0"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_ewbu8"]
 [ext_resource type="Texture2D" uid="uid://b2tfovctiv7gs" path="res://assets/images/pexels-matt-hardy-2109758.jpg" id="1_f7k1j"]
 [ext_resource type="Texture2D" uid="uid://ciltloduhnytp" path="res://assets/icons/Heart.svg" id="3_51bfy"]
+[ext_resource type="Script" path="res://scenes/Image.gd" id="3_cr3j3"]
 [ext_resource type="Texture2D" uid="uid://c70tcusnoisng" path="res://assets/icons/LightBulb.svg" id="3_ikp8g"]
 [ext_resource type="Texture2D" uid="uid://do7fk33fm1fvv" path="res://assets/icons/PlayCircle.svg" id="4_mng0e"]
 [ext_resource type="Texture2D" uid="uid://dls3o3k73odkq" path="res://assets/icons/icons_hovered/LightBulb_hovered.svg" id="4_wchhm"]
@@ -27,9 +28,6 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjstw"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byxc5"]
-bg_color = Color(0, 0, 0, 0.501961)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1o4g"]
 bg_color = Color(0.223529, 0.188235, 0.172549, 1)
 
@@ -45,6 +43,8 @@ thickness = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ptl4w"]
 bg_color = Color(0.52549, 0.419608, 0.345098, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cv50f"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -67,7 +67,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pjstw")
 
-[node name="TextureRect" type="TextureRect" parent="ImagePanel"]
+[node name="Image" type="TextureRect" parent="ImagePanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -77,38 +77,16 @@ grow_vertical = 2
 texture = ExtResource("1_f7k1j")
 expand_mode = 1
 stretch_mode = 6
+script = ExtResource("3_cr3j3")
 
-[node name="BrightnessFrame" type="Panel" parent="ImagePanel"]
+[node name="ColorRect" type="ColorRect" parent="ImagePanel"]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = -79.0
-offset_top = 45.0
-offset_right = -17.0
-offset_bottom = 107.0
-grow_horizontal = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_byxc5")
-metadata/_edit_group_ = true
-
-[node name="BrightnessToggle" type="TextureButton" parent="ImagePanel/BrightnessFrame"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -27.0
-offset_top = -27.0
-offset_right = 27.0
-offset_bottom = 27.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-toggle_mode = true
-texture_normal = ExtResource("3_ikp8g")
-texture_hover = ExtResource("4_wchhm")
-ignore_texture_size = true
-stretch_mode = 0
+color = Color(0, 0, 0, 1)
 
 [node name="BottomPanel" type="Panel" parent="."]
 layout_mode = 1
@@ -126,9 +104,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 5.0
+offset_left = 19.0
 offset_top = -31.0
-offset_right = 67.0
+offset_right = 81.0
 offset_bottom = 31.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_yrtfr")
@@ -254,6 +232,34 @@ offset_right = 1280.0
 offset_bottom = 4.0
 show_percentage = false
 
+[node name="BrightnessFrame" type="Panel" parent="BottomPanel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 87.0
+offset_right = 87.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cv50f")
+metadata/_edit_group_ = true
+
+[node name="BrightnessToggle" type="TextureButton" parent="BottomPanel/BrightnessFrame"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -3.0
+offset_top = -21.0
+offset_right = 39.0
+offset_bottom = 21.0
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("3_ikp8g")
+texture_hover = ExtResource("4_wchhm")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="TopPanel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 10
@@ -329,13 +335,13 @@ position = Vector2(27, 21)
 scale = Vector2(0.0969388, 0.0969388)
 texture = ExtResource("23_1o0wv")
 
-[connection signal="toggled" from="ImagePanel/BrightnessFrame/BrightnessToggle" to="." method="_on_brightness_toggle_toggled"]
 [connection signal="pressed" from="BottomPanel/SupportFrame/SupportButton" to="BottomPanel/SupportFrame/SupportButton" method="_on_pressed"]
 [connection signal="toggled" from="BottomPanel/MediaControlsFrame/PlayButton" to="." method="_on_play_button_toggled"]
 [connection signal="toggled" from="BottomPanel/VolumeFrame/MuteButton" to="." method="_on_mute_button_toggled"]
 [connection signal="drag_ended" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_drag_ended"]
 [connection signal="mouse_exited" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_mouse_exited"]
 [connection signal="value_changed" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_value_changed"]
+[connection signal="toggled" from="BottomPanel/BrightnessFrame/BrightnessToggle" to="." method="_on_brightness_toggle_toggled"]
 [connection signal="gui_input" from="TopPanel" to="TopPanel" method="_on_gui_input"]
 [connection signal="pressed" from="TopPanel/UtilFrame/HBoxContainer/UtilMin" to="TopPanel" method="_on_util_min_pressed"]
 [connection signal="pressed" from="TopPanel/UtilFrame/HBoxContainer/UtilMax" to="TopPanel" method="_on_util_max_pressed"]

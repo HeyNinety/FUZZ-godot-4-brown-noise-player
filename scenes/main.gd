@@ -1,15 +1,17 @@
 extends Control
 
-@onready var image = get_node("ImagePanel/TextureRect")
+@onready var darken = get_node("ImagePanel/ColorRect")
 
 var audio_bus = AudioServer.get_bus_index("Master")
 
+func _ready():
+	darken.modulate = Color (0,0,0,0)
 
 func _on_brightness_toggle_toggled(toggled_on):
 	if toggled_on == true:
-		image.modulate = Color(1,1,1,.5)
+		darken.modulate = Color(1,1,1,.5)
 	else:
-		image.modulate = Color (1,1,1,1)
+		darken.modulate = Color (0,0,0,0)
 
 
 func _on_play_button_toggled(toggled_on):
