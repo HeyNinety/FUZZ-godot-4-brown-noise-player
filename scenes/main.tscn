@@ -1,16 +1,28 @@
-[gd_scene load_steps=30 format=3 uid="uid://da0pnhi6ei4g0"]
+[gd_scene load_steps=32 format=3 uid="uid://da0pnhi6ei4g0"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_ewbu8"]
 [ext_resource type="Texture2D" uid="uid://b2tfovctiv7gs" path="res://assets/images/pexels-matt-hardy-2109758.jpg" id="1_f7k1j"]
 [ext_resource type="Texture2D" uid="uid://ciltloduhnytp" path="res://assets/icons/Heart.svg" id="3_51bfy"]
 [ext_resource type="Texture2D" uid="uid://c70tcusnoisng" path="res://assets/icons/LightBulb.svg" id="3_ikp8g"]
 [ext_resource type="Texture2D" uid="uid://do7fk33fm1fvv" path="res://assets/icons/PlayCircle.svg" id="4_mng0e"]
+[ext_resource type="Texture2D" uid="uid://dls3o3k73odkq" path="res://assets/icons/icons_hovered/LightBulb_hovered.svg" id="4_wchhm"]
 [ext_resource type="Script" path="res://scenes/SupportButton.gd" id="5_60fsh"]
 [ext_resource type="Texture2D" uid="uid://odyul8otvpm7" path="res://assets/icons/SpeakerWave.svg" id="5_gdcre"]
+[ext_resource type="Texture2D" uid="uid://kgeci10ui75j" path="res://assets/icons/icons_hovered/Heart_hovered.svg" id="5_lyyus"]
 [ext_resource type="AudioStream" uid="uid://6n6a55u62dd3" path="res://assets/audio/Brownnoise.ogg" id="7_ei42t"]
 [ext_resource type="Script" path="res://scenes/HSlider.gd" id="7_gtag2"]
-[ext_resource type="Texture2D" uid="uid://ca63jykpcsg3w" path="res://assets/icons/PauseCircle.svg" id="7_iokce"]
-[ext_resource type="Texture2D" uid="uid://be7c3ac1i4fug" path="res://assets/icons/SpeakerXMark.svg" id="9_ojo63"]
+[ext_resource type="Texture2D" uid="uid://dolk0x4ifefe0" path="res://assets/icons/icons_hovered/PlayCircle_hovered.svg" id="9_cynci"]
+[ext_resource type="Texture2D" uid="uid://bcagqi0prc0be" path="res://assets/icons/icons_hovered/PauseCircle_hovered.svg" id="9_qj1g7"]
+[ext_resource type="Texture2D" uid="uid://do8bgvu875p7n" path="res://assets/icons/icons_hovered/SpeakerWave_hovered.svg" id="10_w3ax0"]
+[ext_resource type="Texture2D" uid="uid://cyncto1bty5d7" path="res://assets/icons/icons_hovered/SpeakerXMark_hovered.svg" id="11_lu1wo"]
+[ext_resource type="Script" path="res://scenes/TopPanel.gd" id="15_hk3kj"]
+[ext_resource type="Texture2D" uid="uid://b75ouflx7k6pi" path="res://assets/icons/MinusCircle.svg" id="15_qon0v"]
+[ext_resource type="Texture2D" uid="uid://dihsxnhr82j0r" path="res://assets/icons/icons_hovered/MinusCircle_hovered.svg" id="16_6gfof"]
+[ext_resource type="Texture2D" uid="uid://blrtlkww3rtd6" path="res://assets/icons/PlusCircle.svg" id="17_pgdxf"]
+[ext_resource type="Texture2D" uid="uid://b6sr4xf78dg5d" path="res://assets/icons/icons_hovered/PlusCircle_hovered.svg" id="18_0johc"]
+[ext_resource type="Texture2D" uid="uid://by5mqam08u2dg" path="res://assets/icons/XCircle.svg" id="19_r3uom"]
+[ext_resource type="Texture2D" uid="uid://biejq6m2u5xq7" path="res://assets/icons/icons_hovered/XCircle_hovered.svg" id="20_l0ccj"]
+[ext_resource type="Texture2D" uid="uid://bsojidxpjkgqv" path="res://fuzz_ICON.png" id="23_1o0wv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjstw"]
 bg_color = Color(0, 0, 0, 1)
@@ -18,30 +30,10 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byxc5"]
 bg_color = Color(0, 0, 0, 0.501961)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g0j85"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yi5mp"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cps26"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7f0vt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y3yqm"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1o4g"]
 bg_color = Color(0.223529, 0.188235, 0.172549, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yrtfr"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dtt7b"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s3s8n"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l0b5s"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q1ctt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxe0d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wgi6h"]
 
@@ -64,33 +56,22 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_ewbu8")
+metadata/_edit_use_anchors_ = true
 
 [node name="ImagePanel" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -640.0
-offset_top = -360.0
-offset_right = 640.0
-offset_bottom = 261.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pjstw")
 
 [node name="TextureRect" type="TextureRect" parent="ImagePanel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -640.0
-offset_top = -310.5
-offset_right = 640.0
-offset_bottom = 310.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_f7k1j")
@@ -103,13 +84,14 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -79.0
-offset_top = 16.0
+offset_top = 45.0
 offset_right = -17.0
-offset_bottom = 78.0
+offset_bottom = 107.0
 grow_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_byxc5")
+metadata/_edit_group_ = true
 
-[node name="BrightnessToggle" type="Button" parent="ImagePanel/BrightnessFrame"]
+[node name="BrightnessToggle" type="TextureButton" parent="ImagePanel/BrightnessFrame"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -122,21 +104,21 @@ offset_right = 27.0
 offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_g0j85")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_yi5mp")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_cps26")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_7f0vt")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_y3yqm")
 toggle_mode = true
-icon = ExtResource("3_ikp8g")
-flat = true
-expand_icon = true
+texture_normal = ExtResource("3_ikp8g")
+texture_hover = ExtResource("4_wchhm")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="BottomPanel" type="Panel" parent="."]
-layout_mode = 0
-offset_top = 621.0
-offset_right = 1280.0
-offset_bottom = 720.0
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -90.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_e1o4g")
 
 [node name="SupportFrame" type="Panel" parent="BottomPanel"]
@@ -144,38 +126,32 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 28.0
-offset_top = -30.5
-offset_right = 90.0
-offset_bottom = 31.5
+offset_left = 5.0
+offset_top = -31.0
+offset_right = 67.0
+offset_bottom = 31.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_yrtfr")
+metadata/_edit_group_ = true
 
-[node name="SupportButton" type="Button" parent="BottomPanel/SupportFrame"]
+[node name="SupportButton" type="TextureButton" parent="BottomPanel/SupportFrame"]
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.0
-offset_top = -28.0
-offset_right = 28.0
-offset_bottom = 28.0
+offset_left = -17.0
+offset_top = -17.0
+offset_right = 17.0
+offset_bottom = 17.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_dtt7b")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_s3s8n")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_l0b5s")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_q1ctt")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hxe0d")
-icon = ExtResource("3_51bfy")
-flat = true
-expand_icon = true
+texture_normal = ExtResource("3_51bfy")
+texture_hover = ExtResource("5_lyyus")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("5_60fsh")
 
 [node name="MediaControlsFrame" type="Panel" parent="BottomPanel"]
@@ -194,21 +170,23 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_wgi6h")
 
 [node name="PlayButton" type="TextureButton" parent="BottomPanel/MediaControlsFrame"]
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -23.0
-offset_right = 23.0
-offset_bottom = 23.0
+offset_left = -18.0
+offset_top = -18.0
+offset_right = 18.0
+offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
 toggle_mode = true
 texture_normal = ExtResource("4_mng0e")
-texture_pressed = ExtResource("7_iokce")
+texture_pressed = ExtResource("9_qj1g7")
+texture_hover = ExtResource("9_cynci")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -219,30 +197,34 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -248.0
-offset_top = -30.5
-offset_right = -22.0
-offset_bottom = 31.5
+offset_left = -264.0
+offset_top = -15.5
+offset_right = -38.0
+offset_bottom = 15.5
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_drwnn")
 
 [node name="MuteButton" type="TextureButton" parent="BottomPanel/VolumeFrame"]
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -31.0
-offset_right = 62.0
-offset_bottom = 31.0
+offset_left = 15.0
+offset_top = -16.0
+offset_right = 47.0
+offset_bottom = 16.0
 grow_vertical = 2
 toggle_mode = true
 texture_normal = ExtResource("5_gdcre")
-texture_pressed = ExtResource("9_ojo63")
+texture_pressed = ExtResource("11_lu1wo")
+texture_hover = ExtResource("10_w3ax0")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="HSlider" type="HSlider" parent="BottomPanel/VolumeFrame"]
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -273,12 +255,89 @@ offset_right = 1280.0
 offset_bottom = 4.0
 show_percentage = false
 
+[node name="TopPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 43.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e1o4g")
+script = ExtResource("15_hk3kj")
+
+[node name="UtilFrame" type="Panel" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -16.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yrtfr")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopPanel/UtilFrame"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -9.0
+offset_right = -8.0
+offset_bottom = 7.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="UtilMin" type="TextureButton" parent="TopPanel/UtilFrame/HBoxContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = ExtResource("15_qon0v")
+texture_hover = ExtResource("16_6gfof")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="UtilMax" type="TextureButton" parent="TopPanel/UtilFrame/HBoxContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = ExtResource("17_pgdxf")
+texture_hover = ExtResource("18_0johc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="UtilExit" type="TextureButton" parent="TopPanel/UtilFrame/HBoxContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = ExtResource("19_r3uom")
+texture_hover = ExtResource("20_l0ccj")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_ei42t")
+
+[node name="FuzzIcon" type="Sprite2D" parent="."]
+position = Vector2(27, 21)
+scale = Vector2(0.0969388, 0.0969388)
+texture = ExtResource("23_1o0wv")
 
 [connection signal="toggled" from="ImagePanel/BrightnessFrame/BrightnessToggle" to="." method="_on_brightness_toggle_toggled"]
 [connection signal="pressed" from="BottomPanel/SupportFrame/SupportButton" to="BottomPanel/SupportFrame/SupportButton" method="_on_pressed"]
 [connection signal="toggled" from="BottomPanel/MediaControlsFrame/PlayButton" to="." method="_on_play_button_toggled"]
+[connection signal="toggled" from="BottomPanel/VolumeFrame/MuteButton" to="." method="_on_mute_button_toggled"]
 [connection signal="drag_ended" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_drag_ended"]
 [connection signal="mouse_exited" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_mouse_exited"]
 [connection signal="value_changed" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_value_changed"]
+[connection signal="gui_input" from="TopPanel" to="TopPanel" method="_on_gui_input"]
+[connection signal="pressed" from="TopPanel/UtilFrame/HBoxContainer/UtilMin" to="TopPanel" method="_on_util_min_pressed"]
+[connection signal="pressed" from="TopPanel/UtilFrame/HBoxContainer/UtilMax" to="TopPanel" method="_on_util_max_pressed"]
+[connection signal="pressed" from="TopPanel/UtilFrame/HBoxContainer/UtilExit" to="TopPanel" method="_on_util_exit_pressed"]

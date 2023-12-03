@@ -2,15 +2,7 @@ extends Control
 
 @onready var image = get_node("ImagePanel/TextureRect")
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
+var audio_bus = AudioServer.get_bus_index("Master")
 
 
 func _on_brightness_toggle_toggled(toggled_on):
@@ -25,3 +17,7 @@ func _on_play_button_toggled(toggled_on):
 		$AudioStreamPlayer.play()
 	else:
 		$AudioStreamPlayer.stop()
+
+
+func _on_mute_button_toggled(toggled_on):
+	AudioServer.set_bus_mute(audio_bus, not AudioServer.is_bus_mute(audio_bus))

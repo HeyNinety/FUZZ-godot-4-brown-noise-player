@@ -7,7 +7,7 @@ var bus_index: int
 
 func _ready() -> void:
 	#sets starting value at half volume
-	self.value = 0.5
+	self.value = 0.25
 	
 	
 	bus_index = AudioServer.get_bus_index(bus_name)
