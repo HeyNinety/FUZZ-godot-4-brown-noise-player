@@ -19,5 +19,5 @@ func _on_play_button_toggled(toggled_on):
 		$AudioStreamPlayer.stop()
 
 
-func _on_mute_button_toggled(toggled_on):
+func _on_mute_button_toggled(_toggled_on):
 	AudioServer.set_bus_mute(audio_bus, not AudioServer.is_bus_mute(audio_bus))
