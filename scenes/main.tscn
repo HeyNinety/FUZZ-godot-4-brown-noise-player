@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://da0pnhi6ei4g0"]
+[gd_scene load_steps=30 format=3 uid="uid://da0pnhi6ei4g0"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_ewbu8"]
 [ext_resource type="Texture2D" uid="uid://b2tfovctiv7gs" path="res://assets/images/pexels-matt-hardy-2109758.jpg" id="1_f7k1j"]
@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://odyul8otvpm7" path="res://assets/icons/SpeakerWave.svg" id="5_gdcre"]
 [ext_resource type="AudioStream" uid="uid://6n6a55u62dd3" path="res://assets/audio/Brownnoise.ogg" id="7_ei42t"]
 [ext_resource type="Script" path="res://scenes/HSlider.gd" id="7_gtag2"]
-
-[sub_resource type="Theme" id="Theme_nwmby"]
+[ext_resource type="Texture2D" uid="uid://ca63jykpcsg3w" path="res://assets/icons/PauseCircle.svg" id="7_iokce"]
+[ext_resource type="Texture2D" uid="uid://be7c3ac1i4fug" path="res://assets/icons/SpeakerXMark.svg" id="9_ojo63"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjstw"]
 bg_color = Color(0, 0, 0, 1)
@@ -45,27 +45,7 @@ bg_color = Color(0.223529, 0.188235, 0.172549, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wgi6h"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgt66"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fobm5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_in56p"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_btt0l"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7kxk0"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_drwnn"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cyorr"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_abqyn"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k1q3c"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pj4rt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w1why"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_t6ahn"]
 color = Color(0.121569, 0.0980392, 0.0901961, 1)
@@ -83,7 +63,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = SubResource("Theme_nwmby")
 script = ExtResource("1_ewbu8")
 
 [node name="ImagePanel" type="Panel" parent="."]
@@ -214,29 +193,24 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_wgi6h")
 
-[node name="Play" type="Button" parent="BottomPanel/MediaControlsFrame"]
+[node name="PlayButton" type="TextureButton" parent="BottomPanel/MediaControlsFrame"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -30.0
-offset_top = -30.0
-offset_right = 30.0
-offset_bottom = 30.0
+offset_left = -23.0
+offset_top = -23.0
+offset_right = 23.0
+offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.592157, 0.54902, 0.509804, 1)
-theme_override_colors/icon_normal_color = Color(0.592157, 0.54902, 0.509804, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_lgt66")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_fobm5")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_in56p")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_btt0l")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_7kxk0")
 toggle_mode = true
-icon = ExtResource("4_mng0e")
-expand_icon = true
+texture_normal = ExtResource("4_mng0e")
+texture_pressed = ExtResource("7_iokce")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="VolumeFrame" type="Panel" parent="BottomPanel"]
 layout_mode = 1
@@ -253,23 +227,20 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_drwnn")
 
-[node name="VolumeButton" type="Button" parent="BottomPanel/VolumeFrame"]
+[node name="MuteButton" type="TextureButton" parent="BottomPanel/VolumeFrame"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -3.0
-offset_top = -34.0
-offset_right = 65.0
-offset_bottom = 34.0
+offset_top = -31.0
+offset_right = 62.0
+offset_bottom = 31.0
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_cyorr")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_abqyn")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_k1q3c")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_pj4rt")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_w1why")
-icon = ExtResource("5_gdcre")
-expand_icon = true
+toggle_mode = true
+texture_normal = ExtResource("5_gdcre")
+texture_pressed = ExtResource("9_ojo63")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="HSlider" type="HSlider" parent="BottomPanel/VolumeFrame"]
 layout_mode = 1
@@ -307,7 +278,7 @@ stream = ExtResource("7_ei42t")
 
 [connection signal="toggled" from="ImagePanel/BrightnessFrame/BrightnessToggle" to="." method="_on_brightness_toggle_toggled"]
 [connection signal="pressed" from="BottomPanel/SupportFrame/SupportButton" to="BottomPanel/SupportFrame/SupportButton" method="_on_pressed"]
-[connection signal="toggled" from="BottomPanel/MediaControlsFrame/Play" to="." method="_on_play_toggled"]
+[connection signal="toggled" from="BottomPanel/MediaControlsFrame/PlayButton" to="." method="_on_play_button_toggled"]
 [connection signal="drag_ended" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_drag_ended"]
 [connection signal="mouse_exited" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_mouse_exited"]
 [connection signal="value_changed" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_value_changed"]

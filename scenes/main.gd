@@ -20,9 +20,8 @@ func _on_brightness_toggle_toggled(toggled_on):
 		image.modulate = Color (1,1,1,1)
 
 
-func _on_play_toggled(toggled_on):
+func _on_play_button_toggled(toggled_on):
 	if toggled_on == true:
 		$AudioStreamPlayer.play()
 	else:
 		$AudioStreamPlayer.stop()
-
