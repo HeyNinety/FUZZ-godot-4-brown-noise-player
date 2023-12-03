@@ -14,7 +14,6 @@ FUZZ is an open-source top-down 2D item interaction project made with the [Godot
 ## Features
 - **Volume Slider:** Adjust the volume by using the Hslider.
 - **Backlight Toggle:** Toggle the screen brightness by clicking the light bulb icon.
-- **Dynamic UI:** UI will move out of your way.
 
 
 
