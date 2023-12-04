@@ -47,7 +47,11 @@ Brown noise audio from:
 https://commons.wikimedia.org/wiki/File:Brownnoise.ogg
 
 Images by:
+
 Alan Cabello: https://www.pexels.com/@alancabello/highlights/
+
 Alfo Medeiros: https://www.pexels.com/@alfomedeiros/highlights/
+
 Ferencz Istvan: https://www.pexels.com/@20hertz/
+
 Matt Hardy: https://www.pexels.com/@matthardy/
