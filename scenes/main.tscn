@@ -1,22 +1,23 @@
-[gd_scene load_steps=33 format=3 uid="uid://da0pnhi6ei4g0"]
+[gd_scene load_steps=35 format=3 uid="uid://da0pnhi6ei4g0"]
 
-[ext_resource type="Script" path="res://scenes/main.gd" id="1_ewbu8"]
 [ext_resource type="Texture2D" uid="uid://b2tfovctiv7gs" path="res://assets/images/pexels-matt-hardy-2109758.jpg" id="1_f7k1j"]
 [ext_resource type="Texture2D" uid="uid://ciltloduhnytp" path="res://assets/icons/Heart.svg" id="3_51bfy"]
-[ext_resource type="Script" path="res://scenes/Image.gd" id="3_cr3j3"]
+[ext_resource type="Script" path="res://scripts/Image.gd" id="3_cr3j3"]
 [ext_resource type="Texture2D" uid="uid://c70tcusnoisng" path="res://assets/icons/LightBulb.svg" id="3_ikp8g"]
+[ext_resource type="Script" path="res://scripts/ColorRect.gd" id="4_dgbhr"]
 [ext_resource type="Texture2D" uid="uid://do7fk33fm1fvv" path="res://assets/icons/PlayCircle.svg" id="4_mng0e"]
 [ext_resource type="Texture2D" uid="uid://dls3o3k73odkq" path="res://assets/icons/icons_hovered/LightBulb_hovered.svg" id="4_wchhm"]
-[ext_resource type="Script" path="res://scenes/SupportButton.gd" id="5_60fsh"]
+[ext_resource type="Script" path="res://scripts/SupportButton.gd" id="5_60fsh"]
 [ext_resource type="Texture2D" uid="uid://odyul8otvpm7" path="res://assets/icons/SpeakerWave.svg" id="5_gdcre"]
 [ext_resource type="Texture2D" uid="uid://kgeci10ui75j" path="res://assets/icons/icons_hovered/Heart_hovered.svg" id="5_lyyus"]
 [ext_resource type="AudioStream" uid="uid://6n6a55u62dd3" path="res://assets/audio/Brownnoise.ogg" id="7_ei42t"]
-[ext_resource type="Script" path="res://scenes/HSlider.gd" id="7_gtag2"]
+[ext_resource type="Script" path="res://scripts/HSlider.gd" id="7_gtag2"]
 [ext_resource type="Texture2D" uid="uid://dolk0x4ifefe0" path="res://assets/icons/icons_hovered/PlayCircle_hovered.svg" id="9_cynci"]
 [ext_resource type="Texture2D" uid="uid://bcagqi0prc0be" path="res://assets/icons/icons_hovered/PauseCircle_hovered.svg" id="9_qj1g7"]
 [ext_resource type="Texture2D" uid="uid://do8bgvu875p7n" path="res://assets/icons/icons_hovered/SpeakerWave_hovered.svg" id="10_w3ax0"]
 [ext_resource type="Texture2D" uid="uid://cyncto1bty5d7" path="res://assets/icons/icons_hovered/SpeakerXMark_hovered.svg" id="11_lu1wo"]
-[ext_resource type="Script" path="res://scenes/TopPanel.gd" id="15_hk3kj"]
+[ext_resource type="Script" path="res://scripts/MuteButton.gd" id="14_k2qb6"]
+[ext_resource type="Script" path="res://scripts/TopPanel.gd" id="15_hk3kj"]
 [ext_resource type="Texture2D" uid="uid://b75ouflx7k6pi" path="res://assets/icons/MinusCircle.svg" id="15_qon0v"]
 [ext_resource type="Texture2D" uid="uid://dihsxnhr82j0r" path="res://assets/icons/icons_hovered/MinusCircle_hovered.svg" id="16_6gfof"]
 [ext_resource type="Texture2D" uid="uid://blrtlkww3rtd6" path="res://assets/icons/PlusCircle.svg" id="17_pgdxf"]
@@ -24,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://by5mqam08u2dg" path="res://assets/icons/XCircle.svg" id="19_r3uom"]
 [ext_resource type="Texture2D" uid="uid://biejq6m2u5xq7" path="res://assets/icons/icons_hovered/XCircle_hovered.svg" id="20_l0ccj"]
 [ext_resource type="Texture2D" uid="uid://bsojidxpjkgqv" path="res://fuzz_ICON.png" id="23_1o0wv"]
+[ext_resource type="Script" path="res://scripts/AudioStreamPlayer.gd" id="25_ggpoa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjstw"]
 bg_color = Color(0, 0, 0, 1)
@@ -55,7 +57,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_ewbu8")
 metadata/_edit_use_anchors_ = true
 
 [node name="ImagePanel" type="Panel" parent="."]
@@ -87,6 +88,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+script = ExtResource("4_dgbhr")
 
 [node name="BottomPanel" type="Panel" parent="."]
 layout_mode = 1
@@ -190,9 +192,9 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 15.0
-offset_top = -16.0
-offset_right = 47.0
-offset_bottom = 16.0
+offset_top = -23.5
+offset_right = 63.0
+offset_bottom = 24.5
 grow_vertical = 2
 toggle_mode = true
 texture_normal = ExtResource("5_gdcre")
@@ -200,6 +202,7 @@ texture_pressed = ExtResource("11_lu1wo")
 texture_hover = ExtResource("10_w3ax0")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("14_k2qb6")
 
 [node name="HSlider" type="HSlider" parent="BottomPanel/VolumeFrame"]
 custom_minimum_size = Vector2(48, 48)
@@ -327,21 +330,43 @@ texture_hover = ExtResource("20_l0ccj")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="IconFrame" type="Panel" parent="TopPanel"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -16.0
+offset_right = 220.0
+offset_bottom = 16.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yrtfr")
+
+[node name="Icon" type="TextureRect" parent="TopPanel/IconFrame"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -18.0
+offset_right = 49.0
+offset_bottom = 18.0
+grow_vertical = 2
+texture = ExtResource("23_1o0wv")
+expand_mode = 1
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_ei42t")
-
-[node name="FuzzIcon" type="Sprite2D" parent="."]
-position = Vector2(27, 21)
-scale = Vector2(0.0969388, 0.0969388)
-texture = ExtResource("23_1o0wv")
+script = ExtResource("25_ggpoa")
 
 [connection signal="pressed" from="BottomPanel/SupportFrame/SupportButton" to="BottomPanel/SupportFrame/SupportButton" method="_on_pressed"]
-[connection signal="toggled" from="BottomPanel/MediaControlsFrame/PlayButton" to="." method="_on_play_button_toggled"]
-[connection signal="toggled" from="BottomPanel/VolumeFrame/MuteButton" to="." method="_on_mute_button_toggled"]
+[connection signal="toggled" from="BottomPanel/MediaControlsFrame/PlayButton" to="AudioStreamPlayer" method="_on_play_button_toggled"]
+[connection signal="toggled" from="BottomPanel/VolumeFrame/MuteButton" to="BottomPanel/VolumeFrame/MuteButton" method="_on_toggled"]
 [connection signal="drag_ended" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_drag_ended"]
 [connection signal="mouse_exited" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_mouse_exited"]
 [connection signal="value_changed" from="BottomPanel/VolumeFrame/HSlider" to="BottomPanel/VolumeFrame/HSlider" method="_on_value_changed"]
-[connection signal="toggled" from="BottomPanel/BrightnessFrame/BrightnessToggle" to="." method="_on_brightness_toggle_toggled"]
+[connection signal="toggled" from="BottomPanel/BrightnessFrame/BrightnessToggle" to="ImagePanel/ColorRect" method="_on_brightness_toggle_toggled"]
 [connection signal="gui_input" from="TopPanel" to="TopPanel" method="_on_gui_input"]
 [connection signal="pressed" from="TopPanel/UtilFrame/HBoxContainer/UtilMin" to="TopPanel" method="_on_util_min_pressed"]
 [connection signal="pressed" from="TopPanel/UtilFrame/HBoxContainer/UtilMax" to="TopPanel" method="_on_util_max_pressed"]
