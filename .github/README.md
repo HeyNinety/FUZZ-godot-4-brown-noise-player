@@ -4,7 +4,7 @@
 ![fuzz_LOGO](https://github.com/HeyNinety/FUZZ-godot-4-brown-noise-player/assets/68526679/3075f1e0-e6da-4691-a505-9ffd0aa0d492)
 
 
-FUZZ is an open-source top-down 2D item interaction project made with the [Godot Game Engine](https://godotengine.org).
+FUZZ is an open-source brown noise player made with the [Godot Game Engine](https://godotengine.org).
 
 
 ## Preview
