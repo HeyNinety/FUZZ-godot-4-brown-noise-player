@@ -16,6 +16,9 @@ run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 run/max_fps=60
 run/low_processor_mode=true
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://fuzz_ICON.png"
 
 [display]
@@ -35,4 +38,5 @@ renderer/rendering_method="mobile"
 renderer/rendering_method.mobile="gl_compatibility"
 anti_aliasing/screen_space_roughness_limiter/amount=4.0
 anti_aliasing/quality/msaa_2d=3
+anti_aliasing/quality/msaa_3d=3
 anti_aliasing/quality/screen_space_aa=1
